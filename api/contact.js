@@ -40,10 +40,10 @@ export default async function handler(req, res) {
     });
 
     await transporter.sendMail({
-      from: `"Formulario Web" <${process.env.GMAIL_USER}>`,
+      from: `"Formulario Web - Asistencia Domiciliaria" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_TO || process.env.GMAIL_USER,
       replyTo: email,
-      subject: `Nueva consulta web de ${name}`,
+      subject: `[WEB FORM] Nueva consulta web de ${name}`,
       text: `
 Nueva consulta desde la web
 
@@ -55,13 +55,18 @@ Mensaje:
 ${message}
       `.trim(),
       html: `
-        <h2>Nueva consulta desde la web</h2>
-        <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Teléfono:</strong> ${escapeHtml(phone || "No indicado")}</p>
-        <p><strong>Mensaje:</strong></p>
-        <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
-      `,
+          <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+            <p style="font-size: 12px; color: #666; text-transform: uppercase;">
+              Mensaje recibido desde el formulario web
+            </p>
+            <h2>Nueva consulta desde la web</h2>
+            <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
+            <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+            <p><strong>Teléfono:</strong> ${escapeHtml(phone || "No indicado")}</p>
+            <p><strong>Mensaje:</strong></p>
+            <p>${escapeHtml(message).replace(/\\n/g, "<br>")}</p>
+          </div>
+        `,
     });
 
     return res.status(200).json({
