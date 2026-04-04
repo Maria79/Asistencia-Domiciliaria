@@ -498,11 +498,8 @@
 
         <!-- Formulario -->
         <form
+          id="contactForm"
           class="bg-gray-50 rounded-xl p-8 shadow-md text-left"
-          onsubmit="
-            event.preventDefault();
-            alert('Gracias por tu consulta. Te contactaré pronto.');
-          "
         >
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
@@ -511,6 +508,8 @@
               >
               <input
                 type="text"
+                name="name"
+                required
                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
                 placeholder="Tu nombre"
               />
@@ -521,6 +520,7 @@
               >
               <input
                 type="tel"
+                name="phone"
                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
                 placeholder="Tu teléfono"
               />
@@ -532,6 +532,8 @@
             >
             <input
               type="email"
+              name="email"
+              required
               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
               placeholder="tu@email.com"
             />
@@ -541,17 +543,19 @@
               >¿En qué puedo ayudarte?</label
             >
             <textarea
+              name="message"
               rows="4"
+              required
               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
-              placeholder="Cuéntame qué servicios necesitas (cuidados, limpieza, ambos...)"
+              placeholder="Cuéntame qué servicios necesitas..."
             ></textarea>
           </div>
           <div class="mb-6">
             <label class="flex items-start">
               <input
                 type="checkbox"
-                class="mt-1 mr-2 text-accent rounded"
                 required
+                class="mt-1 mr-2 text-accent rounded"
               />
               <span class="text-sm text-gray-600"
                 >He leído y acepto el tratamiento de mis datos para responder a
@@ -561,13 +565,12 @@
           </div>
           <button
             type="submit"
+            id="submitBtn"
             class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition shadow-md"
           >
             Enviar consulta
           </button>
-          <p class="text-xs text-gray-500 mt-4 text-center">
-            Al enviar este formulario, el mensaje se remitirá al correo.
-          </p>
+          <p id="formMessage" class="text-sm mt-4 text-center hidden"></p>
         </form>
       </div>
     </section>
@@ -602,6 +605,59 @@
       document.querySelectorAll("#mobile-menu a").forEach((link) => {
         link.addEventListener("click", () => menu.classList.add("hidden"));
       });
+
+      //   Formulario
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const submitBtn = document.getElementById("submitBtn");
+          const formMessage = document.getElementById("formMessage");
+          const formData = new FormData(this);
+
+          // Deshabilitar botón mientras se envía
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Enviando...";
+
+          try {
+            const response = await fetch("/api/contact", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                name: formData.get("name"),
+                email: formData.get("email"),
+                phone: formData.get("phone"),
+                message: formData.get("message"),
+              }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+              formMessage.textContent =
+                "✅ Gracias por tu consulta. Te contactaré pronto.";
+              formMessage.className =
+                "text-sm mt-4 text-center text-green-600 font-semibold";
+              formMessage.classList.remove("hidden");
+              this.reset();
+            } else {
+              throw new Error(data.message || "Error al enviar");
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            formMessage.textContent =
+              "❌ Error al enviar. Por favor, inténtalo de nuevo o escribe directamente al email.";
+            formMessage.className =
+              "text-sm mt-4 text-center text-red-600 font-semibold";
+            formMessage.classList.remove("hidden");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Enviar consulta";
+          }
+        });
     </script>
   </body>
 </html>
