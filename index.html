@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Asistencia Domiciliaria - Cuidados y Acompañamiento en Tenerife
-    </title>
-    <link rel="icon" href="/favicon.ico"/>
+    <title>Asistencia Domiciliaria - Cuidados y Hogar en Tenerife</title>
 
+    <link rel="icon" href="./favicon.ico" />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,14 +59,20 @@
     </style>
   </head>
   <body class="bg-gray-50 smooth-scroll">
+    <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">
           <div class="flex items-center">
-            <i class="fa-solid fa-heart-pulse text-3xl text-accent mr-3"></i>
-            <span class="font-serif text-2xl font-bold text-gray-800"
-              >Asistencia Domiciliaria</span
-            >
+            <i
+              class="fa-solid fa-hands-holding-circle text-3xl text-accent mr-3"
+            ></i>
+            <div>
+              <span class="font-serif text-2xl font-bold text-gray-800"
+                >Asistencia Domiciliaria</span
+              >
+              <p class="text-xs text-gray-500">Cuidados y Hogar</p>
+            </div>
           </div>
           <div class="hidden md:flex items-center space-x-8">
             <a
@@ -83,16 +93,17 @@
             <a
               href="#contacto"
               class="bg-primary text-white px-5 py-2 rounded-full hover:bg-blue-800 transition shadow-lg"
+              >Contactar</a
             >
-              Contactar
-            </a>
           </div>
           <div class="md:hidden flex items-center">
             <button
+              type="button"
               id="mobile-menu-btn"
               class="text-gray-600 hover:text-primary focus:outline-none"
+              aria-label="Abrir menú de navegación"
             >
-              <i class="fa-solid fa-bars text-2xl"></i>
+              <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
             </button>
           </div>
         </div>
@@ -121,6 +132,7 @@
       </div>
     </nav>
 
+    <!-- Hero Section -->
     <section
       id="inicio"
       class="relative h-screen flex items-center justify-center"
@@ -128,7 +140,7 @@
       <div class="absolute inset-0 z-0">
         <img
           src="./cuidar2.png"
-          alt="Cuidado en casa"
+          alt="Cuidados integrales en el hogar"
           class="w-full h-full object-cover object-top"
         />
         <div class="hero-overlay absolute inset-0"></div>
@@ -137,11 +149,11 @@
         <h1
           class="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg"
         >
-          Bienestar y tranquilidad <br />en tu propio hogar
+          Cuidamos de ti y de tu hogar
         </h1>
         <p class="text-xl text-gray-100 mb-8 max-w-2xl mx-auto font-light">
-          Atención personalizada, compañía y apoyo profesional para que tú y tu
-          familia disfrutéis de la mejor calidad de vida en Tenerife Norte.
+          Servicio integral de asistencia para personas mayores: atención
+          personalizada, compañía y mantenimiento del hogar en Tenerife Norte.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a
@@ -160,29 +172,30 @@
       </div>
     </section>
 
+    <!-- About / Trust Section -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div class="order-2 md:order-1">
             <img
               src="https://image.qwenlm.ai/public_source/54e9f637-f64a-4357-843b-cf6e8a9db08a/125f38c27-276c-4287-ac14-bbed66fa8b8e.png"
-              alt="Manos unidas"
+              alt="Cuidado integral"
               class="rounded-lg shadow-2xl"
             />
           </div>
           <div class="order-1 md:order-2">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Más que cuidado, es compañía
+              Apoyo integral para vivir con tranquilidad
             </h2>
             <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-              Entendemos que la comodidad y la seguridad en casa son lo más
-              importante. Mi objetivo es facilitar el día a día, ofreciendo un
-              trato cercano, respetuoso y profesional.
+              Entendemos que las personas mayores que viven solas necesitan más
+              que compañía: requieren un hogar seguro, limpio y organizado,
+              además de atención personal respetuosa y profesional.
             </p>
             <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-              Cuento con una sólida formación y experiencia práctica en entornos
-              hospitalarios de alto nivel, lo que garantiza un cuidado seguro y
-              atento a las necesidades específicas de cada persona.
+              Ofrezco un servicio completo que combina el cuidado personal con
+              el mantenimiento del hogar, para que puedas disfrutar de una vida
+              cómoda, segura y digna en tu propia casa.
             </p>
             <div class="flex items-center space-x-4">
               <div class="flex-shrink-0">
@@ -200,128 +213,227 @@
       </div>
     </section>
 
+    <!-- Services Section -->
     <section id="servicios" class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Cuidados Personalizados
+            Servicios Integrales
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Servicios adaptados para mejorar la calidad de vida y la autonomía
-            en el hogar.
+            Cuidado personal y mantenimiento del hogar en un solo servicio.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
-          >
+        <!-- Cuidados Personales -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+            <i class="fa-solid fa-heart-pulse text-accent mr-3 text-3xl"></i>
+            Cuidados Personales
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
             <div
-              class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
             >
-              <i class="fa-solid fa-user-nurse text-2xl text-primary"></i>
+              <div
+                class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-user-nurse text-2xl text-primary"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Atención Personal
+              </h4>
+              <p class="text-gray-600">
+                Apoyo constante, vigilancia y acompañamiento para garantizar tu
+                seguridad y bienestar diario.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">
-              Atención Personal
-            </h3>
-            <p class="text-gray-600">
-              Apoyo constante y vigilancia para garantizar la seguridad y el
-              bienestar de la persona mayor.
-            </p>
-          </div>
 
-          <div
-            class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
-          >
+            <!-- Service 2 -->
             <div
-              class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
             >
-              <i class="fa-solid fa-bath text-2xl text-primary"></i>
+              <div
+                class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-bath text-2xl text-primary"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Higiene y Confort
+              </h4>
+              <p class="text-gray-600">
+                Asistencia respetuosa en el aseo personal, vestimenta y
+                preparación para el descanso.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">
-              Higiene y Confort
-            </h3>
-            <p class="text-gray-600">
-              Asistencia respetuosa en el aseo personal, vestimenta y
-              preparación para el descanso.
-            </p>
-          </div>
 
-          <div
-            class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
-          >
+            <!-- Service 3 -->
             <div
-              class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
             >
-              <i class="fa-solid fa-utensils text-2xl text-primary"></i>
+              <div
+                class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-pills text-2xl text-primary"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Gestión de Medicación
+              </h4>
+              <p class="text-gray-600">
+                Control y administración puntual de la medicación prescrita para
+                evitar olvidos.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Alimentación</h3>
-            <p class="text-gray-600">
-              Preparación de comidas saludables y apoyo durante la ingesta para
-              asegurar una buena nutrición.
-            </p>
-          </div>
 
-          <div
-            class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
-          >
+            <!-- Service 4 -->
             <div
-              class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
             >
-              <i class="fa-solid fa-pills text-2xl text-primary"></i>
+              <div
+                class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i
+                  class="fa-solid fa-hands-holding-circle text-2xl text-primary"
+                ></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Acompañamiento
+              </h4>
+              <p class="text-gray-600">
+                Compañía agradable, conversación, paseos y apoyo emocional para
+                combatir la soledad.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">
-              Gestión de Medicación
-            </h3>
-            <p class="text-gray-600">
-              Control y administración puntual de la medicación prescrita para
-              evitar olvidos.
-            </p>
           </div>
+        </div>
 
-          <div
-            class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
-          >
+        <!-- Mantenimiento del Hogar -->
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+            <i class="fa-solid fa-house-chimney text-accent mr-3 text-3xl"></i>
+            Mantenimiento del Hogar
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 5 -->
             <div
-              class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
             >
-              <i
-                class="fa-solid fa-hands-holding-circle text-2xl text-primary"
-              ></i>
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-broom text-2xl text-accent"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Limpieza del Hogar
+              </h4>
+              <p class="text-gray-600">
+                Limpieza exhaustiva de todas las estancias: suelos, superficies,
+                baños y cocina.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Acompañamiento</h3>
-            <p class="text-gray-600">
-              Compañía agradable, conversación, paseos y apoyo emocional para
-              combatir la soledad.
-            </p>
-          </div>
 
-          <div
-            class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
-          >
+            <!-- Service 6 -->
             <div
-              class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
             >
-              <i class="fa-solid fa-house-chimney text-2xl text-primary"></i>
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-utensils text-2xl text-accent"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Alimentación y Cocina
+              </h4>
+              <p class="text-gray-600">
+                Preparación de comidas saludables, organización de despensa y
+                apoyo en la ingesta.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">
-              Ayuda en el Hogar
-            </h3>
-            <p class="text-gray-600">
-              Pequeñas tareas domésticas, orden y mantenimiento del entorno
-              limpio y seguro.
-            </p>
+
+            <!-- Service 7 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
+            >
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-shirt text-2xl text-accent"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Lavandería y Ropa
+              </h4>
+              <p class="text-gray-600">
+                Lavado, planchado y organización de la ropa de cama, baño y
+                vestimenta.
+              </p>
+            </div>
+
+            <!-- Service 8 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
+            >
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-box-open text-2xl text-accent"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">Organización</h4>
+              <p class="text-gray-600">
+                Orden y clasificación de pertenencias, armarios y espacios de
+                almacenamiento.
+              </p>
+            </div>
+
+            <!-- Service 9 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
+            >
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i
+                  class="fa-solid fa-screwdriver-wrench text-2xl text-accent"
+                ></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Mantenimiento Básico
+              </h4>
+              <p class="text-gray-600">
+                Pequeñas reparaciones, cambio de bombillas y mantenimiento
+                preventivo del hogar.
+              </p>
+            </div>
+
+            <!-- Service 10 -->
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
+            >
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-wind text-2xl text-accent"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Ambientes Agradables
+              </h4>
+              <p class="text-gray-600">
+                Ventilación, cuidado de plantas y creación de espacios cómodos y
+                acogedores.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Location Section -->
     <section class="py-20 relative">
       <div class="absolute inset-0 z-0">
         <img
           src="https://image.qwenlm.ai/public_source/54e9f637-f64a-4357-843b-cf6e8a9db08a/13f299035-5275-4fac-9496-37f911ab6eb8.png"
           alt="Tenerife Norte"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover object-bottom"
         />
         <div class="absolute inset-0 bg-blue-900 opacity-80"></div>
       </div>
@@ -332,230 +444,163 @@
           Servicio en Tenerife Norte
         </h2>
         <p class="text-xl mb-8 max-w-3xl mx-auto">
-          Disponible para desplazamientos en toda la zona norte de la isla y
-          alrededores. Llevamos el cuidado profesional a la puerta de tu casa.
+          Disponible para desplazamientos en toda la zona norte de la isla.
+          Llevamos el cuidado integral a la puerta de tu casa.
         </p>
         <div
           class="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20"
         >
           <i class="fa-solid fa-location-dot text-accent mr-3 text-xl"></i>
           <span class="font-semibold text-lg"
-            >Zona de Cobertura: Puerto de la Cruz, La Orotava, Los Realejos y
+            >Zona: Puerto de la Cruz, La Orotava, Los Realejos y
             alrededores</span
           >
         </div>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contacto" class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Hablemos sobre cómo puedo ayudarte
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            También puedes enviarme tu consulta mediante este formulario y la
-            recibiré por email.
-          </p>
-        </div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+          Hablemos sobre cómo puedo ayudarte
+        </h2>
+        <p class="text-xl text-gray-600 mb-10">
+          Cuéntame qué necesitas y adaptaré el servicio a tus necesidades
+          específicas de cuidado y hogar.
+        </p>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          <div class="bg-blue-50 rounded-2xl p-10 shadow-inner">
-            <div class="flex flex-col items-center justify-center space-y-6 text-center h-full">
-              <div
-                class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md"
+        <!-- <div class="bg-blue-50 rounded-2xl p-10 shadow-inner mb-10">
+          <div class="flex flex-col items-center justify-center space-y-6">
+            <div
+              class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md"
+            >
+              <i class="fa-solid fa-envelope text-3xl text-accent"></i>
+            </div>
+            <div>
+              <p
+                class="text-gray-500 uppercase tracking-wide text-sm font-semibold mb-2"
               >
-                <i class="fa-solid fa-phone text-3xl text-accent"></i>
-              </div>
-              <div>
-                <p
-                  class="text-gray-500 uppercase tracking-wide text-sm font-semibold mb-2"
-                >
-                  Llamar ahora
-                </p>
-                <p class="text-3xl font-bold text-gray-800">
-                  [Teléfono Pendiente]
-                </p>
-              </div>
-              <p class="text-sm text-gray-500">
-                <i class="fa-solid fa-circle-info mr-1"></i> El número de teléfono
-                se añadirá próximamente.
+                Contacto directo
               </p>
+              <a
+                href="mailto:verojakas@gmail.com"
+                class="text-2xl font-bold text-primary hover:underline"
+                >verojakas@gmail.com</a
+              >
+            </div>
+            <p class="text-sm text-gray-500 mt-2">
+              <i class="fa-solid fa-circle-info mr-1"></i> También disponible
+              por WhatsApp (número pendiente)
+            </p>
+          </div>
+        </div> -->
 
-              <div class="pt-4 border-t border-blue-100 w-full">
-                
-              </div>
+        <!-- Formulario -->
+        <form
+          class="bg-gray-50 rounded-xl p-8 shadow-md text-left"
+          onsubmit="
+            event.preventDefault();
+            alert('Gracias por tu consulta. Te contactaré pronto.');
+          "
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Nombre completo</label
+              >
+              <input
+                type="text"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Teléfono</label
+              >
+              <input
+                type="tel"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
+                placeholder="Tu teléfono"
+              />
             </div>
           </div>
-
-          <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-            <form id="contact-form" class="space-y-6">
-              <div>
-                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Nombre completo
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  placeholder="Escribe tu nombre"
-                  class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-primary"
-                />
-              </div>
-
-              <div>
-                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Correo electrónico
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder="nombre@correo.com"
-                  class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-primary"
-                />
-              </div>
-
-              <div>
-                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Teléfono
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Tu teléfono (opcional)"
-                  class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-primary"
-                />
-              </div>
-
-              <div>
-                <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Consulta
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  required
-                  placeholder="Cuéntame qué tipo de ayuda necesitas..."
-                  class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-primary resize-none"
-                ></textarea>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <input
-                  id="privacy"
-                  name="privacy"
-                  type="checkbox"
-                  required
-                  class="mt-1 h-4 w-4 rounded border-gray-300"
-                />
-                <label for="privacy" class="text-sm text-gray-600">
-                  He leído y acepto el tratamiento de mis datos para responder a mi consulta.
-                </label>
-              </div>
-
-              <button
-                id="submit-btn"
-                type="submit"
-                class="w-full bg-accent text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-green-700 transition shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                Enviar consulta
-              </button>
-
-              <p id="form-status" class="text-sm hidden"></p>
-
-              <p class="text-xs text-gray-500 leading-relaxed">
-                Al enviar este formulario, el mensaje se remitirá al correo.
-              </p>
-            </form>
+          <div class="mb-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-2"
+              >Correo electrónico</label
+            >
+            <input
+              type="email"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
+              placeholder="tu@email.com"
+            />
           </div>
-        </div>
+          <div class="mb-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-2"
+              >¿En qué puedo ayudarte?</label
+            >
+            <textarea
+              rows="4"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
+              placeholder="Cuéntame qué servicios necesitas (cuidados, limpieza, ambos...)"
+            ></textarea>
+          </div>
+          <div class="mb-6">
+            <label class="flex items-start">
+              <input
+                type="checkbox"
+                class="mt-1 mr-2 text-accent rounded"
+                required
+              />
+              <span class="text-sm text-gray-600"
+                >He leído y acepto el tratamiento de mis datos para responder a
+                mi consulta.</span
+              >
+            </label>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition shadow-md"
+          >
+            Enviar consulta
+          </button>
+          <p class="text-xs text-gray-500 mt-4 text-center">
+            Al enviar este formulario, el mensaje se remitirá al correo.
+          </p>
+        </form>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-gray-300 py-10">
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center"
       >
-        <div class="mb-4 md:mb-0">
+        <div class="mb-4 md:mb-0 text-center md:text-left">
           <span class="font-serif text-xl font-bold text-white"
             >Asistencia Domiciliaria</span
           >
-          <p class="text-sm mt-1">Cuidados y Acompañamiento</p>
+          <p class="text-sm mt-1">
+            Cuidados Personales y Mantenimiento del Hogar
+          </p>
         </div>
         <div class="text-sm text-center md:text-right">
           <p>
-            &copy; 2026 Asistencia Domiciliaria - Cuidados. Todos los derechos
-            reservados.
+            &copy; 2026 Asistencia Domiciliaria. Todos los derechos reservados.
           </p>
           <p class="mt-1">Tenerife, Islas Canarias.</p>
         </div>
       </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
       const btn = document.getElementById("mobile-menu-btn");
       const menu = document.getElementById("mobile-menu");
-
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-
+      btn?.addEventListener("click", () => menu.classList.toggle("hidden"));
       document.querySelectorAll("#mobile-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          menu.classList.add("hidden");
-        });
-      });
-
-      const form = document.getElementById("contact-form");
-      const statusEl = document.getElementById("form-status");
-      const submitBtn = document.getElementById("submit-btn");
-
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        statusEl.classList.add("hidden");
-        statusEl.textContent = "";
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Enviando...";
-
-        const payload = {
-          name: form.name.value.trim(),
-          email: form.email.value.trim(),
-          phone: form.phone.value.trim(),
-          message: form.message.value.trim(),
-        };
-
-        try {
-          const response = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          });
-
-          const data = await response.json();
-
-          if (!response.ok) {
-            throw new Error(data.message || "No se pudo enviar la consulta.");
-          }
-
-          form.reset();
-          statusEl.textContent = "Tu consulta se ha enviado correctamente. Te responderé pronto.";
-          statusEl.className = "text-sm text-green-600";
-        } catch (error) {
-          statusEl.textContent = error.message || "Ha ocurrido un error al enviar el formulario.";
-          statusEl.className = "text-sm text-red-600";
-        } finally {
-          statusEl.classList.remove("hidden");
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Enviar consulta";
-        }
+        link.addEventListener("click", () => menu.classList.add("hidden"));
       });
     </script>
   </body>
