@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hausbetreuung - Seniorenbetreuung in Teneriffa</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png" />
+
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        color: #2d3748;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Merriweather", serif;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          rgba(15, 23, 42, 0.6),
+          rgba(15, 23, 42, 0.4)
+        );
+      }
+      .text-primary {
+        color: #2c5282;
+      }
+      .bg-primary {
+        background-color: #2c5282;
+      }
+      .text-accent {
+        color: #38a169;
+      }
+      .bg-accent {
+        background-color: #38a169;
+      }
+      .smooth-scroll {
+        scroll-behavior: smooth;
+      }
+      .lang-selector a {
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .lang-selector a.active {
+        background-color: #2c5282;
+        color: white;
+      }
+      .lang-selector a:hover:not(.active) {
+        background-color: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 smooth-scroll">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20">
+          <div class="flex items-center">
+            <i
+              class="fa-solid fa-hands-holding-circle text-3xl text-accent mr-3"
+            ></i>
+            <div>
+              <span class="font-serif text-2xl font-bold text-gray-800"
+                >Hausbetreuung</span
+              >
+              <p class="text-xs text-gray-500">
+                Persönliche Pflege & Haushaltshilfe
+              </p>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <!-- Language Selector -->
+            <div class="lang-selector flex space-x-2 mr-4">
+              <a href="/" class="text-gray-600">ES</a>
+              <a href="/en/" class="text-gray-600">EN</a>
+              <a href="/de/" class="active">DE</a>
+            </div>
+            <a
+              href="#inicio"
+              class="text-gray-600 hover:text-primary transition"
+              >Startseite</a
+            >
+            <a
+              href="#servicios"
+              class="text-gray-600 hover:text-primary transition"
+              >Dienstleistungen</a
+            >
+            <a
+              href="#experiencia"
+              class="text-gray-600 hover:text-primary transition"
+              >Erfahrung</a
+            >
+            <a
+              href="#contacto"
+              class="bg-primary text-white px-5 py-2 rounded-full hover:bg-blue-800 transition shadow-lg"
+              >Kontakt</a
+            >
+          </div>
+          <div class="md:hidden flex items-center">
+            <button
+              type="button"
+              id="mobile-menu-btn"
+              class="text-gray-600 hover:text-primary focus:outline-none"
+              aria-label="Navigationsmenü öffnen"
+            >
+              <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="lang-selector flex space-x-2 px-4 py-3 border-b">
+          <a href="/" class="text-gray-600">ES</a>
+          <a href="/en/" class="text-gray-600">EN</a>
+          <a href="/de/" class="active">DE</a>
+        </div>
+        <a
+          href="#inicio"
+          class="block px-4 py-3 text-gray-600 hover:bg-gray-100"
+          >Startseite</a
+        >
+        <a
+          href="#servicios"
+          class="block px-4 py-3 text-gray-600 hover:bg-gray-100"
+          >Dienstleistungen</a
+        >
+        <a
+          href="#experiencia"
+          class="block px-4 py-3 text-gray-600 hover:bg-gray-100"
+          >Erfahrung</a
+        >
+        <a
+          href="#contacto"
+          class="block px-4 py-3 text-primary font-bold hover:bg-gray-100"
+          >Kontakt</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="inicio"
+      class="relative h-screen flex items-center justify-center"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          src="../cuidar2.png"
+          alt="Hausbetreuungsdienste"
+          class="w-full h-full object-cover object-bottom"
+        />
+        <div class="hero-overlay absolute inset-0"></div>
+      </div>
+      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <h1
+          class="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg"
+        >
+          Wir kümmern uns um Sie und Ihr Zuhause
+        </h1>
+        <p class="text-xl text-gray-100 mb-8 max-w-2xl mx-auto font-light">
+          Umfassender Betreuungsservice für Senioren: persönliche Pflege,
+          Begleitung und Haushaltshilfe in Nord-Teneriffa.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#contacto"
+            class="bg-accent text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-700 transition shadow-lg transform hover:-translate-y-1"
+          >
+            Informationen anfordern
+          </a>
+          <a
+            href="#servicios"
+            class="bg-white text-gray-800 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition shadow-lg transform hover:-translate-y-1"
+          >
+            Dienstleistungen ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Trust Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1">
+            <img
+              src="https://image.qwenlm.ai/public_source/54e9f637-f64a-4357-843b-cf6e8a9db08a/125f38c27-276c-4287-ac14-bbed66fa8b8e.png"
+              alt="Umfassende Betreuung"
+              class="rounded-lg shadow-2xl"
+            />
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Umfassende Unterstützung für ein ruhiges Leben
+            </h2>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              Wir verstehen, dass allein lebende Senioren mehr als nur
+              Gesellschaft brauchen: Sie benötigen ein sicheres, sauberes und
+              organisiertes Zuhause sowie respektvolle und professionelle
+              persönliche Betreuung.
+            </p>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              Ich biete einen kompletten Service, der persönliche Pflege mit
+              Haushaltshilfe kombiniert, damit Sie ein komfortables, sicheres
+              und würdevolles Leben in Ihrem eigenen Zuhause genießen können.
+            </p>
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0">
+                <i class="fa-solid fa-certificate text-4xl text-accent"></i>
+              </div>
+              <div>
+                <p class="font-bold text-gray-800">Zertifizierte Erfahrung</p>
+                <p class="text-sm text-gray-500">
+                  Universitätsklinikum der Kanaren (HUC)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Umfassende Dienstleistungen
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Persönliche Pflege und Haushaltshilfe in einem Service.
+          </p>
+        </div>
+
+        <!-- Personal Care -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+            <i class="fa-solid fa-heart-pulse text-accent mr-3 text-3xl"></i>
+            Persönliche Betreuung
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
+            >
+              <div
+                class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-user-nurse text-2xl text-primary"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Persönliche Aufmerksamkeit
+              </h4>
+              <p class="text-gray-600">
+                Ständige Unterstützung, Überwachung und Begleitung zur
+                Gewährleistung Ihrer täglichen Sicherheit und Ihres
+                Wohlbefindens.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
+            >
+              <div
+                class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-bath text-2xl text-primary"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Hygiene & Komfort
+              </h4>
+              <p class="text-gray-600">
+                Respektvolle Unterstützung bei der persönlichen Hygiene, beim
+                Ankleiden und bei der Vorbereitung auf die Ruhe.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
+            >
+              <div
+                class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-pills text-2xl text-primary"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Medikamentenmanagement
+              </h4>
+              <p class="text-gray-600">
+                Kontrolle und rechtzeitige Verabreichung der verschriebenen
+                Medikamente zur Vermeidung von Vergessen.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-accent"
+            >
+              <div
+                class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i
+                  class="fa-solid fa-hands-holding-circle text-2xl text-primary"
+                ></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">Begleitung</h4>
+              <p class="text-gray-600">
+                Angenehme Gesellschaft, Gespräche, Spaziergänge und emotionale
+                Unterstützung zur Bekämpfung der Einsamkeit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Home Maintenance -->
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+            <i class="fa-solid fa-house-chimney text-accent mr-3 text-3xl"></i>
+            Haushaltshilfe
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
+            >
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-broom text-2xl text-accent"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Hausreinigung
+              </h4>
+              <p class="text-gray-600">
+                Gründliche Reinigung aller Räume: Böden, Oberflächen, Badezimmer
+                und Küche.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
+            >
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-utensils text-2xl text-accent"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Mahlzeiten & Küche
+              </h4>
+              <p class="text-gray-600">
+                Zubereitung gesunder Mahlzeiten, Vorratsorganisation und
+                Unterstützung beim Essen.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
+            >
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-shirt text-2xl text-accent"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Wäsche & Kleidung
+              </h4>
+              <p class="text-gray-600">
+                Waschen, Bügeln und Organisation von Bettwäsche, Handtüchern und
+                persönlicher Kleidung.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
+            >
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-box-open text-2xl text-accent"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">Organisation</h4>
+              <p class="text-gray-600">
+                Ordnung und Klassifizierung von Besitztümem, Schränken und
+                Aufbewahrungsräumen.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
+            >
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i
+                  class="fa-solid fa-screwdriver-wrench text-2xl text-accent"
+                ></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Grundlegende Wartung
+              </h4>
+              <p class="text-gray-600">
+                Kleine Reparaturen, Glühbirnenwechsel und vorbeugende
+                Hauswartung.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 border-t-4 border-primary"
+            >
+              <div
+                class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="fa-solid fa-wind text-2xl text-accent"></i>
+              </div>
+              <h4 class="text-xl font-bold text-gray-800 mb-3">
+                Angenehme Umgebungen
+              </h4>
+              <p class="text-gray-600">
+                Lüftung, Pflanzenpflege und Schaffung von komfortablen und
+                einladenden Räumen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-20 relative">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://image.qwenlm.ai/public_source/54e9f637-f64a-4357-843b-cf6e8a9db08a/13f299035-5275-4fac-9496-37f911ab6eb8.png"
+          alt="Nord-Teneriffa"
+          class="w-full h-full object-cover object-bottom"
+        />
+        <div class="absolute inset-0 bg-blue-900 opacity-80"></div>
+      </div>
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Service in Nord-Teneriffa
+        </h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+          Verfügbar für Fahrten im gesamten nördlichen Bereich der Insel. Wir
+          bringen umfassende Betreuung zu Ihrer Haustür.
+        </p>
+        <div
+          class="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20"
+        >
+          <i class="fa-solid fa-location-dot text-accent mr-3 text-xl"></i>
+          <span class="font-semibold text-lg"
+            >Gebiet: Puerto de la Cruz, La Orotava, Los Realejos und
+            Umgebung</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+          Lassen Sie uns darüber sprechen, wie ich Ihnen helfen kann
+        </h2>
+        <p class="text-xl text-gray-600 mb-10">
+          Erzählen Sie mir, was Sie brauchen, und ich passe den Service an Ihre
+          spezifischen Betreuungs- und Haushaltsbedürfnisse an.
+        </p>
+
+        <div class="bg-blue-50 rounded-2xl p-10 shadow-inner mb-10">
+          <div class="flex flex-col items-center justify-center space-y-6">
+            <div
+              class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md"
+            >
+              <i class="fa-solid fa-envelope text-3xl text-accent"></i>
+            </div>
+            <div>
+              <p
+                class="text-gray-500 uppercase tracking-wide text-sm font-semibold mb-2"
+              >
+                Direkter Kontakt
+              </p>
+              <a
+                href="mailto:verojakas@gmail.com"
+                class="text-2xl font-bold text-primary hover:underline"
+                >verojakas@gmail.com</a
+              >
+            </div>
+            <p class="text-sm text-gray-500 mt-2">
+              <i class="fa-solid fa-circle-info mr-1"></i> Auch verfügbar über
+              WhatsApp (Nummer ausstehend)
+            </p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form
+          id="contactForm"
+          class="bg-gray-50 rounded-xl p-8 shadow-md text-left"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Vollständiger Name</label
+              >
+              <input
+                type="text"
+                name="name"
+                required
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
+                placeholder="Ihr Name"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-2"
+                >Telefon</label
+              >
+              <input
+                type="tel"
+                name="phone"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
+                placeholder="Ihre Telefonnummer"
+              />
+            </div>
+          </div>
+          <div class="mb-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-2"
+              >E-Mail-Adresse</label
+            >
+            <input
+              type="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
+              placeholder="ihre@email.com"
+            />
+          </div>
+          <div class="mb-6">
+            <label class="block text-sm font-semibold text-gray-700 mb-2"
+              >Wie kann ich Ihnen helfen?</label
+            >
+            <textarea
+              name="message"
+              rows="4"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition"
+              placeholder="Erzählen Sie mir, welche Dienstleistungen Sie benötigen..."
+            ></textarea>
+          </div>
+          <div class="mb-6">
+            <label class="flex items-start">
+              <input
+                type="checkbox"
+                required
+                class="mt-1 mr-2 text-accent rounded"
+              />
+              <span class="text-sm text-gray-600"
+                >Ich habe gelesen und akzeptiere die Verarbeitung meiner Daten
+                zur Beantwortung meiner Anfrage.</span
+              >
+            </label>
+          </div>
+          <button
+            type="submit"
+            id="submitBtn"
+            class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition shadow-md"
+          >
+            Anfrage senden
+          </button>
+          <p id="formMessage" class="text-sm mt-4 text-center hidden"></p>
+          <p class="text-xs text-gray-500 mt-4 text-center">
+            Durch das Absenden dieses Formulars wird die Nachricht an
+            verojakas@gmail.com gesendet.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-10">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-4 md:mb-0 text-center md:text-left">
+          <span class="font-serif text-xl font-bold text-white"
+            >Hausbetreuung</span
+          >
+          <p class="text-sm mt-1">Persönliche Pflege & Haushaltshilfe</p>
+        </div>
+        <div class="text-sm text-center md:text-right">
+          <p>&copy; 2026 Hausbetreuung. Alle Rechte vorbehalten.</p>
+          <p class="mt-1">Teneriffa, Kanarische Inseln, Spanien</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile Menu Toggle
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn?.addEventListener("click", () => menu.classList.toggle("hidden"));
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => menu.classList.add("hidden"));
+      });
+
+      // Form Submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const submitBtn = document.getElementById("submitBtn");
+          const formMessage = document.getElementById("formMessage");
+          const formData = new FormData(this);
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Wird gesendet...";
+
+          try {
+            const response = await fetch("/api/contact", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                name: formData.get("name"),
+                email: formData.get("email"),
+                phone: formData.get("phone"),
+                message: formData.get("message"),
+              }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+              formMessage.textContent =
+                "✅ Vielen Dank für Ihre Anfrage. Ich werde Sie bald kontaktieren.";
+              formMessage.className =
+                "text-sm mt-4 text-center text-green-600 font-semibold";
+              formMessage.classList.remove("hidden");
+              this.reset();
+            } else {
+              throw new Error(data.message || "Fehler beim Senden");
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            formMessage.textContent =
+              "❌ Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an die E-Mail.";
+            formMessage.className =
+              "text-sm mt-4 text-center text-red-600 font-semibold";
+            formMessage.classList.remove("hidden");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Anfrage senden";
+          }
+        });
+    </script>
+  </body>
+</html>
