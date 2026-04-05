@@ -56,6 +56,19 @@
       .smooth-scroll {
         scroll-behavior: smooth;
       }
+      .lang-selector a {
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .lang-selector a.active {
+        background-color: #2c5282;
+        color: white;
+      }
+      .lang-selector a:hover:not(.active) {
+        background-color: #e2e8f0;
+      }
     </style>
   </head>
   <body class="bg-gray-50 smooth-scroll">
@@ -75,7 +88,7 @@
             </div>
           </div>
           <div class="hidden md:flex items-center space-x-8">
-             <!-- Language Selector -->
+            <!-- Language Selector -->
             <div class="lang-selector flex space-x-2 mr-4">
               <a href="/" class="active">ES</a>
               <a href="/en/" class="text-gray-600">EN</a>
@@ -115,6 +128,11 @@
         </div>
       </div>
       <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="lang-selector flex space-x-2 px-4 py-3 border-b">
+          <a href="/" class="active">ES</a>
+          <a href="/en/" class="text-gray-600">EN</a>
+          <a href="/de/" class="text-gray-600">DE</a>
+        </div>
         <a
           href="#inicio"
           class="block px-4 py-3 text-gray-600 hover:bg-gray-100"
